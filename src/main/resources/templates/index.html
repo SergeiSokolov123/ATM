@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All ATMs</title>
+</head>
+<body>
+<h1>All ATMs:</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Address</th>
+        <th>Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="atm : ${atms}">
+        <td th:text="${atm.id}"></td>
+        <td th:text="${atm.address}"></td>
+        <td th:text="${atm.balance}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
